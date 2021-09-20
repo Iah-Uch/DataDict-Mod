@@ -112,6 +112,13 @@ Para facilitar a visualização e apresentação dos elementos do dicionário, a
 </div>    
 
 
+### **Contribuintes:**
+- <a href="https://github.com/oguialmeida">Guilherme Gomes</a>
+- <a href="https://github.com/Iah-Uch">Iãh Uchôa</a>
+- <a href="https://github.com/JP-Barbaresco">João Pedro Barbaresco</a>
+- <a href="https://github.com/LucasEvanglg">LucasEvanglg</a>
+
+
 ### **Tecnologias utilizadas:**
 
 - Python;
