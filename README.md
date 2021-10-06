@@ -7,7 +7,7 @@ Modificação estética e funcional do plugin para MySQL Workbench "Wb Datadict"
 Foi proposto à equipe encontrar uma forma de criar um dicionário de dados através do MySQL Workbench. Primeiro pesquisamos dentro do programa e identificamos uma maneira de exportar as tabelas, a qual não se enquadrava no formato do dicionário de dados. Após pesquisa, encontramos <a href="https://gitlab.com/luis-felipe/wb-datadict">um plugin</a> que consegue executar corretamente essa função, entretanto estava datado, então realizamos algumas modificações.
 
 
-### **Plugin Original:**
+<!-- ### **Plugin Original:**
 
 Observamos que o plugin original não supria os requisitos propostos, pois as tabelas estavam desorganizadas, o campo de comentário não era editável, o índice era de difícil leitura e a compreensão do banco era complexa devido à grande extensão da página.
 
@@ -23,7 +23,7 @@ III) Organização das tabelas;
 IV) Habilitar a edição das descrições (comentários);
 
 V) Adição de menus "Dropdown" e formatação do índice.
-
+ -->
 
 ### **Estilização da página**
 
@@ -37,7 +37,7 @@ O visual e disposição de elementos do dicionário gerado pelo plugin original 
 
 **Figura 2** - Página gerada pelo mod.
   
-![image](https://user-images.githubusercontent.com/84246094/134050465-6133984e-ec56-402a-bf94-1a9c2f9c634b.png)
+![image](https://user-images.githubusercontent.com/84246094/136258715-9dbc1af1-b3c5-4bd8-9973-9245b5f515ca.png)
 
 </div>
 
@@ -53,8 +53,8 @@ Algumas das colunas presentes nas tabelas geradas continham informações que ra
 ![image](https://user-images.githubusercontent.com/84246094/134051824-0254e966-2699-416b-a01c-775e24c04127.png)
 
 **Figura 4** - Tabela gerada pelo mod. 
-
-![image](https://user-images.githubusercontent.com/84246094/134052142-bdd43b1d-d938-43e4-8fdf-ee21c77a6b4a.png)  
+  
+![image](https://user-images.githubusercontent.com/84246094/136258887-c7276d1e-40e2-46e9-8015-583d36ef28bc.png)
   
 </div>
 
@@ -71,7 +71,7 @@ Anteriormente não era possível editar ou corrigir os comentários extraídos d
 
 **Figura 6** - Coluna de descrição gerada pelo mod (editável).
 
-![image](https://user-images.githubusercontent.com/84246094/134052965-2774d398-89ad-4726-b03c-9d4c09f68bec.png)
+![image](https://user-images.githubusercontent.com/84246094/136259297-c24c5708-65a6-4161-bd25-0b86d12a633e.png)
   
 </div> 
 
@@ -84,14 +84,14 @@ Para facilitar a visualização e apresentação dos elementos do dicionário, a
   
 **Figura 7** - Menus gerados pelo mod.
 
-![image](https://user-images.githubusercontent.com/84246094/134053321-81804977-da1c-4d0e-8011-a73b63f16f5c.png)
+![image](https://user-images.githubusercontent.com/84246094/136259500-0ed70057-b8d3-44e8-9cdd-0e96c2b35d42.png)
 
 </div>  
 
 
 ### **Instalação:**
 
-- Baixar o arquivo <a href="https://github.com/Iah-Uch/WB-DataDict-Mod/blob/main/DataDict-Mod.py">DataDict-Mod.py</a>;
+- Baixar o arquivo <a href="https://github.com/Iah-Uch/WB-DataDict-Mod/blob/main/DataDict-Mod.py">DataDict-Mod.py</a> para o tema claro ou <a href="https://github.com/Iah-Uch/DataDict-Mod/blob/main/DataDict-Mod-DT.py">DataDict-Mod-DT.py</a> para o tema escuro;
 - Ao abrir o MySQL Workbench navegue até **Scripting → Install Plugin/Module…** e selecione o arquivo do plugin modificado.
 
 <div align="center">
@@ -107,7 +107,7 @@ Para facilitar a visualização e apresentação dos elementos do dicionário, a
 
 <div align="center"> 
   
-![image](https://user-images.githubusercontent.com/84246094/134054805-68cc21e4-d4e3-4977-b1b8-3877735da0c8.png)
+![image](https://user-images.githubusercontent.com/84246094/136260519-c87e92ac-700c-4553-b240-7b964cf2d692.png)
 
 </div>    
 
