@@ -19,16 +19,19 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   <meta charset="ISO-8859-1">
   <meta name="author" content="WB Datadict">
   <meta name="description" content="[PROJECTNAME] Data Dictionary.">
+  
   <title>[PROJECTNAME] Data Dictionary</title>
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
   <script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@1,700&display=swap" rel="stylesheet">
-
+  <link href="https://unpkg.com/pattern.css" rel="stylesheet">
   <script>
     // Highlight table corresponding to the current fragment in the URL.
     $(document).ready(function(){
@@ -45,8 +48,17 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   </script>
 
 <style type="text/css">
+    .pattern-dots-sm {
+        background-image: radial-gradient(#ffffff99 .5px, #ffffff00 .5px);
+        background-size: calc(10 * 1.5px) calc(10 * 1.5px);
+    }
+    
+    h1 {
+        text-shadow: 2px 2px #5450509e;
+    }
+    
     html {
-        background-image: linear-gradient(45deg, #07007694, #00acff63);
+        background-image: radial-gradient(#85d2ff, #8777d5f0);
     }
 
     ul {
@@ -66,7 +78,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     }
 
     header {
-        color: black;
+        color: #f1fcff;
         text-align: center;
         font-family: 'Quantico', sans-serif;
         font-size: large;
@@ -81,7 +93,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     }
 
     td, th {
-        padding: 1em;
+        padding: 0.4em;
         border-color: black;
         border-style: solid;
         border-width: 1px;
@@ -89,7 +101,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
     caption {
         padding: 7px;
-        background-color: #b2afd5a3;
+        background-color: #6a6a6a6e;
 	    border: solid 2px black;
 	    border-bottom: none;
         font-family: Arial;
@@ -99,22 +111,22 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
     tr:hover {
         color: #333;
-        background: #F2F2F2;
+        background-color: white;
     }
 
     td:hover {
         color: #333;
-        background: #e9f0ff;
+        background-color: #cfdeff94;
     }
 
     th { //Table Headers
         padding: 2.5px; 
-        background: #d5d5d5;
+        background: #c8c8c8ad;
     }
 
     td {
-        color: #6A6A6A;
-        background: white;
+        background: #ffffffc2;
+        color: #363636;
     }
 
     .centered {
@@ -137,7 +149,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         font-size: small;
         padding: 1px;
         max-width: 30ch;
-        max-height: 9ch;
+        max-height: 4ch;
         overflow: auto;
         outline: none;
     }
@@ -145,23 +157,27 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     .indexwrapper {
         margin: auto;
         display: flex;
-        width: 52%;
-        background-color: rgba(255, 255, 255, 0.6);
+        width: 53%;
+        background-color: rgb(255 255 255 / 42%);
         border-radius: 5px;
+        backdrop-filter: blur(1px);
     }
 
     .tablewrapper {
         padding: 10px;
         border-radius: 5px;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgb(255 255 255 / 53%);
         margin: 1.5rem auto 0 auto;
         width: 49%;
         outline: none;
         display: table;
+        box-shadow: 2px 6px 8px 0px #00000026;
+        backdrop-filter: blur(1px);
     }
 
     .dropdownindex {
         font-family: Arial;
+        color: #ffffffcc;
     }
 
     .dropdowntables {
@@ -181,7 +197,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         font-family: Arial;
         font-weight: bold;
         padding: 0px 0px 10px 0px;
-        color: #0e077d8a;
+        color: #ffffffcc;
     }
 
     button:hover {
@@ -189,15 +205,17 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         border: none;
         border-radius: 3px;
         font-size: 16px;
-        background-color: #dff9ff;
+        background-color: #dbe0ffe0;
+        background-image: radial-gradient(#dbe0ffe0, #050f491c);
     }
 
     .button {
+        box-shadow: 1px 2.1px 0 0.5px #5450509e;
         padding: 5px;
         border: none;
         border-radius: 3px;
         font-size: 16px;
-        background-color: white;
+        background-color: #ffffffe0;
     }
 
     body::-webkit-scrollbar {
@@ -219,7 +237,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     }
 
     .editable::-webkit-scrollbar-track {
-        background: #f1f1f1cc;
+        background: #d9d9d9cc;
     }
 
     .editable::-webkit-scrollbar-thumb {
@@ -229,14 +247,17 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     }    
 
 </style>
+
 </head>
 
-<body>
+<body><div id="font" class="flex flex-column pattern-dots-sm gray-darker br-16 py-l5">
     <header>
         <h1>[PROJECTNAME] - Data Dictionary</h1>
+        
          <p>
             <em>[EDITION]</em>
         </p>
+        
         <p align="center">
             <em>[DESCRIPTION]</em>
         </p>
@@ -252,7 +273,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <div>
         [MAIN]
     </div>
-</body>
+</div></body>
+
   <script type="text/javascript">
     $("#save").click(function() {
         var blob = new Blob([$("html").html()], {type: "text/html;charset=utf-8"});
@@ -266,16 +288,17 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 # PLUGIN
 # ======
 
-ModuleInfo = DefineModule(name="WB Datadict",
+ModuleInfo = DefineModule(name="WB Datadict Light Theme",
                           author="LIGJ",
                           version="1.4.0")
 
 
-@ModuleInfo.plugin("my.plugin.create_datadict",
-                   caption="Gerar Dicionário de Dados ('.html')",
+@ModuleInfo.plugin("wb.data_dict.light",
+                   caption="Gerar Dicionário de Dados (Light)",
                    input=[wbinputs.currentCatalog()],
                    pluginMenu="Catalog")
 @ModuleInfo.export(grt.INT, grt.classes.db_Catalog)
+
 def create_datadict(catalog):
     # Get default schema
     schema = catalog.defaultSchema
@@ -294,7 +317,7 @@ def create_datadict(catalog):
     # Write the HTML file to disk (GUI Dialog)
     doc_path = os.path.dirname(grt.root.wb.docPath)
     dialog = gui.FileChooser(gui.SaveFile)
-    dialog.set_title("Gerar Dicionário de Dados")
+    dialog.set_title("Salve em um arquivo .html")
     dialog.set_directory(doc_path)
     response = dialog.run_modal()
     file_path = dialog.get_path()
@@ -340,8 +363,7 @@ def column_as_html(column, table):
         markup += "<td class='centered'>&nbsp;</td>"
 
     # Comment
-    markup += "<td><div class='editable' contenteditable>{0}</div></td>".format(
-        escape(column.comment))
+    markup += "<td><div class='editable' contenteditable>{0}</div></td>".format(escape(column.comment))
     markup += "</tr>"
 
     return markup
@@ -401,7 +423,7 @@ def save(html, path):
     try:
         html_file = open(path, "w")
     except IOError:
-        text = "Could not open {0}.".format(path)
+        text = "Erro ao abrir {0}.".format(path)
         gui.Utilities.show_error("Erro ao salvar arquivo.", text, "Ok", "", "")
     else:
         html_file.write(html)
@@ -422,11 +444,9 @@ def save(html, path):
 
 def table_as_html(table):
     """Return table as an HTML table."""
-    markup = "<div class='tablewrapper'><details open class='dropdowntables' id='{0}'><table id='{0}'>".format(
-        table.name)
+    markup = "<div class='tablewrapper'><details open class='dropdowntables' id='{0}'><table id='{0}'>".format(table.name)
     markup += "<summary class='tablesummary'>{0}</summary>".format(table.name)
     markup += "<caption>{0}</caption>".format(table.name)
-    # markup += "<tr><td colspan='12'>{0}</td></tr>".format(escape(table.comment))
     markup += html_table_header()
 
     # Format column objects in HTML
