@@ -1,7 +1,7 @@
 # WB Datadict Mod- Modified MySQL Workbench plugin to generate data dictionaries.
 #
 # Public domain 2021 LIGJ. All rights waived.
-
+ 
 import os
 import datetime
 import webbrowser
