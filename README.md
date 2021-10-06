@@ -91,7 +91,7 @@ Para facilitar a visualização e apresentação dos elementos do dicionário, a
 
 ### **Instalação:**
 
-- Baixar o arquivo <a href="https://github.com/Iah-Uch/WB-DataDict-Mod/blob/main/DataDict-Mod.py">DataDict-Mod.py</a> para o tema claro ou <a href="https://github.com/Iah-Uch/DataDict-Mod/blob/main/DataDict-Mod-DT.py">DataDict-Mod-DT.py</a> para o tema escuro;
+- Baixar o arquivo <a href="https://github.com/Iah-Uch/WB-DataDict-Mod/blob/main/DataDict-Mod.py">DataDict-Mod.py</a> para o tema claro ou <a href="https://github.com/Iah-Uch/DataDict-Mod/blob/main/DataDict-Mod-DT.py">DataDict-Mod-DT.py</a> para o tema escuro (<a href="https://github.com/Iah-Uch/DataDict-Mod/tree/main/Exemplos">Exemplos de Tema</a>);
 - Ao abrir o MySQL Workbench navegue até **Scripting → Install Plugin/Module…** e selecione o arquivo do plugin modificado.
 
 <div align="center">
