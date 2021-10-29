@@ -36,9 +36,17 @@ O visual e disposição de elementos do dicionário gerado pelo plugin original 
 ![image](https://user-images.githubusercontent.com/84246094/134051416-7b7e600d-c7bb-483d-a86e-8cedb1461431.png)
 
 **Figura 2** - Página gerada pelo mod.
-  
-![image](https://user-images.githubusercontent.com/84246094/136258715-9dbc1af1-b3c5-4bd8-9973-9245b5f515ca.png)
+ <details align="left" open><summary>Dark</summary>
+ 
+ ![Dark](https://user-images.githubusercontent.com/84246094/139510869-bd486167-3225-462d-81ba-477ee7c494d1.png)
 
+ </details>
+ 
+<details align="left"><summary>Light</summary>
+ 
+ ![light](https://user-images.githubusercontent.com/84246094/139510881-5b6ed6fa-9429-44cc-b38d-55f4e4409667.png)
+ 
+ </details>
 </div>
 
 
