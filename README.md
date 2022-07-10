@@ -1,15 +1,16 @@
 # **WB-Datadict Mod**
 Modificação estética e funcional do plugin para MySQL Workbench "Wb Datadict".
 
-
+<!-- 
 ### **Motivação:**
 
 Foi proposto à equipe encontrar uma forma de criar um dicionário de dados através do MySQL Workbench. Primeiro pesquisamos dentro do programa e identificamos uma maneira de exportar as tabelas, a qual não se enquadrava no formato do dicionário de dados. Após pesquisa, encontramos <a href="https://gitlab.com/luis-felipe/wb-datadict">um plugin</a> que consegue executar corretamente essa função, entretanto estava datado, então realizamos algumas modificações.
 
 
-<!-- ### **Plugin Original:**
+### **Plugin Original:**
 
-Observamos que o plugin original não supria os requisitos propostos, pois as tabelas estavam desorganizadas, o campo de comentário não era editável, o índice era de difícil leitura e a compreensão do banco era complexa devido à grande extensão da página.
+Observamos que o plugin original não supria os requisitos propostos, pois as tabelas estavam desorganizadas, o campo de comentário não era editável, o índice era de difícil leitura e a compreensão do banco era complexa devido à grande extensão da página. 
+--->
 
 
 ### **Modificações:**
@@ -49,7 +50,7 @@ O visual e disposição de elementos do dicionário gerado pelo plugin original 
  </details>
 </div>
 
-
+<!-- 
 ### **Organização das tabelas**
 
 Algumas das colunas presentes nas tabelas geradas continham informações que raramente são referidas dessa forma (no ambiente de trabalho onde nos encontramos pelo menos) e que certamente seriam documentadas na descrição se um dia fossem, tornando-as de certa forma redundantes. Entretanto, apenas removê-las não é a solução mais elegante, então estudamos a possibilidade de adicionar e excluir estas colunas de forma dinâmica no futuro.
@@ -95,7 +96,7 @@ Para facilitar a visualização e apresentação dos elementos do dicionário, a
 ![image](https://user-images.githubusercontent.com/84246094/136259500-0ed70057-b8d3-44e8-9cdd-0e96c2b35d42.png)
 
 </div>  
-
+--->
 
 ### **Instalação:**
 
